@@ -1,0 +1,32 @@
+<h3>Update Client</h3>
+<div  style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    
+      <div class="form-group">
+          <label for="name">Type du Compte </label>
+          <input
+            type="text"
+            class="form-control"
+            id="type"
+            required
+            [(ngModel)]="compte.type"
+            name="type"
+          />
+         
+        </div>
+        <div class="form-group">
+          <label for="name">Solde du Compte </label>
+          <input
+            type="text"
+            class="form-control"
+            id="solde"
+            required
+            [(ngModel)]="compte.solde"
+            name="solde"
+          />
+         
+        </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

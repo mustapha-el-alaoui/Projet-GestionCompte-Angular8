@@ -1,0 +1,31 @@
+<h2>Compte Details</h2> 
+
+<hr/>
+<div *ngIf="compte">
+  <div>
+    <label><b>Num Compte: </b></label> {{compte.numCompte}}
+  </div>
+  <div>
+    <label><b>Type Compte: </b></label> {{compte.type}}
+  </div>
+  <div>
+    <label><b>Date Creation: </b></label> {{compte.dateCreation}}
+  </div>
+  <div>
+    <label><b>Solde Compte: </b></label> {{compte.solde}} MAD
+  </div>
+  <div>
+    <label><b> découvert: </b></label>
+    {{ compte.decouvert }} MAD
+  </div>
+  <div>
+    <label><b> taux: </b></label>
+    {{ compte.taux }} MAD
+  </div>
+
+</div>
+
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Compte List</button><br>

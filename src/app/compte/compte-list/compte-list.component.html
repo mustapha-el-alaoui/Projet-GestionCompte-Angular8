@@ -1,0 +1,60 @@
+<div class="container" my-3>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>Comptes List</h2>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>numCompte</th>
+              <th>type</th>
+              <th>dateCreation</th>
+              <th>solde</th>
+  
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let compte of comptes | async">
+              <td>{{ compte.numCompte }}</td>
+              <td>{{ compte.type}}</td>
+              <td>{{compte.dateCreation}}</td>
+              <td>{{compte.solde}}</td>
+             
+  
+              <td>
+                <button class="btn btn-danger"
+                (click)="deleteCompte(compte.numCompte)">
+
+                >
+                  Delete
+                </button>
+                <td>
+                    <button class="btn btn-info"
+                    (click)="updateCompte(compte.numCompte)"
+
+                   >
+                      Update
+                    </button>
+                <button
+                 class="btn btn-info"
+                  style="margin-left: 10px"
+                  (click)="compteDetails(compte.numCompte)"
+                >
+                  Details
+                </button>
+              </td>
+            </tr>
+          </tbody>
+          <button 
+          class="btn btn-info"
+           style="margin-left: 10px"
+           (click)="createCompte()">
+            create
+          </button>
+        </table>
+      </div>
+    </div>
+  </div>
+  
